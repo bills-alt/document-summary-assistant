@@ -8,8 +8,8 @@ page it came from.
 
 Everything runs in the browser. No server, no upload, no API key.
 
-**Live app:** _<add your deployed URL here>_
-**Repository:** _<add your GitHub URL here>_
+Live app: https://bills-alt.github.io/document-summary-assistant/
+Repository: https://github.com/bills-alt/document-summary-assistant
 
 ---
 
