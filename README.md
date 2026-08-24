@@ -88,19 +88,20 @@ de-duplicating is what holds up across a research paper *and* a scanned receipt.
 ## Project structure
 
 ```
-lens/
-├── index.html          markup, view states, CDN + source script tags
-├── css/style.css       design tokens, layout, two themes, responsive rules
-├── js/
-│   ├── summarize.js    segmentation, TF-IDF, TextRank, features, MMR, keyphrases
-│   ├── analyze.js      the nine improvement checks and the health score
-│   ├── extract.js      PDF layout rebuild, image preprocessing, OCR, fallbacks
-│   └── app.js          state, rendering, progress, exports, keyboard
-├── assets/sample.js    bundled demo document
-├── APPROACH.md         the 200-word write-up
-├── LICENSE
-└── README.md
+index.html        markup, view states, CDN + source script tags
+style.css         design tokens, layout, two themes, responsive rules
+summarize.js      segmentation, TF-IDF, TextRank, features, MMR, keyphrases
+analyze.js        the nine improvement checks and the health score
+extract.js        PDF layout rebuild, image preprocessing, OCR, fallbacks
+app.js            state, rendering, progress, exports, keyboard
+sample.js         bundled demo document
+APPROACH.md       the 200-word write-up
+LICENSE
+README.md
 ```
+
+Flat by design — the app is ten files with no build step, so a folder tree would
+add navigation without adding clarity. Each file owns one stage of the pipeline.
 
 No `package.json`, no `node_modules`, no build step, no bundler, no framework.
 Two libraries load from a CDN at runtime — **PDF.js** for the text layer and
